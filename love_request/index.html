@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(252, 147, 164);
+        }
+        .love {
+            display: flex;
+            justify-content: center;
+            background: #e48686;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            background: #e57d7d;
+        }
+        button {
+            margin: 10px;
+            color: aqua;
+            background: #000;
+            border-radius: 5px;
+        }
+        #no {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="love"><h1>do you love me ??</h1></div>
+    <div class="btn">
+        <button id="yes" onclick="love()">yes</button>
+        <button id="no">nope</button>
+    </div>
+
+    <script>
+        document.getElementById("no").addEventListener("mouseover", function() {
+            var button = document.getElementById("no");
+            var buttonStyle = button.style;
+            var randomX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+            var randomY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+            buttonStyle.position = "absolute";
+            buttonStyle.left = randomX + "px";
+            buttonStyle.top = randomY + "px";
+        });
+
+        document.getElementById("no").addEventListener("onclik", function() {
+            var button = document.getElementById("no");
+            var buttonStyle = button.style;
+            var randomX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+            var randomY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+            buttonStyle.position = "absolute";
+            buttonStyle.left = randomX + "px";
+            buttonStyle.top = randomY + "px";
+        });
+
+       function love(){alert("thank you...");}
+    </script>
+</body>
+</html>
